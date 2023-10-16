@@ -16154,6 +16154,20 @@
       bgColor: {
         type: "string",
         default: "#EBEBEB"
+      },
+      theAlignment: {
+        type: "string",
+        default: "left"
+      }
+    },
+    description: "This is a description of this plugin besed on React",
+    example: {
+      attributes: {
+        question: "What is my name?",
+        correctAnswer: 3,
+        answers: ['Meowsalot', 'Barksalot', 'Purrsloud', 'Halyna'],
+        bgColor: "#CFE8F1",
+        theAlignment: "center"
       }
     },
     edit: EditComponent,
@@ -16190,7 +16204,12 @@
       style: {
         backgroundColor: props.attributes.bgColor
       }
-    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.BlockControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.AlignmentToolbar, {
+      value: props.attributes.theAlignment,
+      onChange: x => props.setAttributes({
+        theAlignment: x
+      })
+    })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
       title: "Background Color",
       initialOpen: true
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_color__WEBPACK_IMPORTED_MODULE_4__.ChromePicker, {
